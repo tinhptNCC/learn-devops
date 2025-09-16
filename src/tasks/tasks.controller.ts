@@ -10,6 +10,11 @@ export class TasksController {
     return this.tasksService.getAllTasks();
   }
 
+  @Get('/test')
+  getTest(): string {
+    return 'This is a test endpoint';
+  }
+
   @Post()
   addTask(@Body('task') task: string): string[] {
     return this.tasksService.addTask(task);
